@@ -1,0 +1,10 @@
+query Pokemons($limit: Int!) {
+  pokemon_v2_pokemon(
+    order_by: { height: desc }
+    limit: $limit
+    where: { is_default: { _eq: true } }
+  ) {
+    name
+    height
+  }
+}
